@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="eso.png" type="image/x-icon">
+    <style>
+
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(201, 196, 196);
+            
+        }
+        form{
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+        }
+        input{
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 35px;
+            border-radius: 10px;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    
+    <form action="">
+    <img height="100px" src="logopreto.png" alt="logo-udesc">
+    <h3>LOGIN</h3>
+    <input type="text" placeholder="login"  id="login">
+    <input type="password" placeholder="senha"  id="senha">
+    <input type="submit"  onclick="logar(); return false"><br>
+    <img height="60px" width="150px" src="eso.png" alt="logo-eso">
+
+    </form>
+
+    <script>
+
+        function logar(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "extensao" && senha == "extensao"){
+                alert('Acesso liberado');
+                location.href = "home.html";
+            }else{
+                alert('Usuário ou senha incorreto')
+            }
+        }
+    </script>
+
+
+</body>
+</html>
